@@ -15,10 +15,21 @@ running the pouring simulation in CoppeliaSim and the corresponding file describ
 # INSTRUCTIONS
 - Create a Python environment using the requirements.txt file 
 - Open the robot_pouring.ttt CoppeliaSim scene file
-- Activate the Python environment and execute the script specifying the following parameters:
+- Activate the Python environment and execute the script from the consoloe specifying the following parameters:
   - "relative_diameter":  represents the relation between the container rim diameters, defined as *RD = target diameter/source diameter*. RD < 1 corresponds to a target container of smaller diameter, and RD > 1 corresponds to a target container of larger diameter.     
    - "fullness": FU expresses the fullness level of the source container as a fraction. For example, FU = 0.5 corresponds to a half-full source container.     
   - "relative_capacity": represents the relation between the containers' capacities, defined as  *RC = target capacity/source capacity*. RC < 1 corresponds to a target container with lower capacity, and RC > 1 to a target container with larger capacity.
    - "n_repetitions": number of trial repetitions.
 
 Note that the target container's height and diameter are determined based on RC and RD.
+
+## Example:
+Run a pouring trial with the following parameters:
+- RD = 0.9
+- fullness = 0.5
+- RC = 1.2
+- n_repetitions = 2 
+
+```
+python .\pouring_trial.py 0.9 0.5 1.2 2
+```
