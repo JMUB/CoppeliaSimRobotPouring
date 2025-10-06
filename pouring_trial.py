@@ -3,9 +3,8 @@
 """
 Created on Thu Jun 19 16:17:57 2025
 
-- use to run a single trial with parameters from the console
+- Run a pouring trial with parameters from the console
 
-@author: jm
 """
 import sys
 import math
@@ -102,13 +101,6 @@ thickness = 0.01
 
 # volume of the source container:
 ref_volume = 0.0005142 
-
-# of variables as specified in the network
- # relative_diameter: 0
- # spillage: 1
- # fullness: 2 
- # relative_capacity: 3
- # relative_volume: 4
  
 if len(sys.argv)>1:
     
@@ -123,8 +115,6 @@ if len(sys.argv)>1:
 else:
     print('\nRun pouring trial with default parameters')
     relative_diameter = 1.2
-         
-    spillage_flag = 'default'
     
     fullness = 0.7
     
